@@ -62,8 +62,24 @@ button {
   font-style: italic;
 }
 
-.menu-icon use {
+.menu-icon {
   stroke: #111111;
+}
+.page-menu-button {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.page-menu-button:focus .menu-icon,
+.page-menu-button:hover .menu-icon {
+  stroke: #fd9222;
 }
 /*  ================ mobile-menu-style=============== */
 .page-heder-nav {
@@ -122,17 +138,7 @@ button {
 .mobile-navigation {
   margin-bottom: auto;
 }
-.page-menu-button {
-  display: flex;
-  width: 24px;
-  height: 24px;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  margin-left: auto;
-}
+
 .menu-icon-item {
   width: 22px;
   height: 22px;
@@ -220,7 +226,7 @@ button {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-button:focus,
-.hero-button:active {
+.hero-button:hover {
   color: #fd9222;
   background-color: #fcf1e0;
 }
@@ -242,7 +248,7 @@ button {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-link-first:focus,
-.hero-link-first:active {
+.hero-link-first:hover {
   border-color: #fd9222;
   color: #fd9222;
   background-color: #ffffff;
@@ -253,19 +259,33 @@ button {
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: -0.03em;
-
   display: flex;
   gap: 12px;
   align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hero-link-icon {
+  fill: #fd9222;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hero-link-second:focus,
+.hero-link-second:hover {
+  color: #fd9222;
+}
+.hero-link-second:focus .hero-link-icon,
+.hero-link-second:hover .hero-link-icon {
+  fill: #ffffff;
+}
+.hero-link-second:focus .hero-scrol-bg,
+.hero-link-second:hover .hero-scrol-bg {
+  background-color: #fd9222;
 }
 .hero-button-container {
   display: flex;
   flex-wrap: wrap;
   gap: 32px 14px;
 }
-.hero-link-icon {
-  fill: #fd9222;
-}
+
 .hero-scrol-bg {
   display: flex;
   justify-content: center;
@@ -274,11 +294,46 @@ button {
   width: 28px;
   height: 28px;
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ==========================hero-section-end================== */
 /* ==========================benefits-section=================== */
 .benefits-section {
   background-color: #1e1823;
+  padding-bottom: 38px;
+  padding-top: 20px;
+}
+.benefits-title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 18px;
+}
+.benefits-title-last {
+  letter-spacing: 0.18px;
+}
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.benefits-text {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: normal;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0em;
+}
+.ben-container-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 22px;
 }
 /* ==========================benefits-section-end=================== */
 
