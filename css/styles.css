@@ -1293,8 +1293,7 @@ button {
 .container-for-forms {
   margin-bottom: 14px;
 }
-.modal-input:focus + .modal-input-svg,
-.modal-input:hover + .modal-input-svg {
+.modal-input:focus + .modal-input-svg {
   stroke: #fd9222;
 }
 .modal-input:focus,
@@ -1330,8 +1329,7 @@ button {
   line-height: normal;
   letter-spacing: -0.02em;
 }
-.comment-textarea:focus,
-.comment-textarea:hover {
+.comment-textarea:focus {
   border: 1.5px solid #fd9222;
 }
 
